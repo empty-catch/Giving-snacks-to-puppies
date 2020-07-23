@@ -9,8 +9,6 @@ public class Food : MonoBehaviour, IPointerClickHandler
     private Image food;
     [SerializeField]
     private VoidEvent foodGiven;
-    [SerializeField]
-    private VoidEvent foodFallen;
 
     private Sequence sequence;
 
@@ -28,7 +26,6 @@ public class Food : MonoBehaviour, IPointerClickHandler
                   .AppendCallback(() => foodGiven?.Invoke())
                   .AppendInterval(0.5F)
                   .Append(food.rectTransform.DOAnchorPosY(-200F, 0.5F).SetEase(Ease.InQuad))
-                  .AppendCallback(() => foodFallen?.Invoke())
                   .Append(food.DOFade(0F, 0.5F))
                   .AppendInterval(0.5F)
                   .AppendCallback(() => food.rectTransform.anchoredPosition = Vector2.zero)

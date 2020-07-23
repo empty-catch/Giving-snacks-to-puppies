@@ -1192,8 +1192,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1534211188}
+  m_Children: []
   m_Father: {fileID: 520375920}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1234,7 +1233,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB0A8\uC740\uC2DC\uAC04           "
+  m_Text: "\uB0A8\uC740\uC2DC\uAC04"
 --- !u!222 &483362672
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2907,7 +2906,21 @@ MonoBehaviour:
   stringTimeRemainingChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1534211189}
+      - m_Target: {fileID: 483362671}
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  scoreChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1125780413}
         m_MethodName: set_text
         m_Mode: 0
         m_Arguments:
@@ -3862,37 +3875,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 766783083}
     m_Modifications:
     - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodFallen.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodFallen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1571185279}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
       propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1571185279}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Feed
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7025842723277873704, guid: c379fedd71b540846ac524d13fdbb58a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4011,84 +3996,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1490754511}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1534211187
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1534211188}
-  - component: {fileID: 1534211190}
-  - component: {fileID: 1534211189}
-  m_Layer: 5
-  m_Name: Time
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1534211188
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534211187}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 483362670}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0.5}
---- !u!114 &1534211189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534211187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 42
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 42
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: 60.00
---- !u!222 &1534211190
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534211187}
-  m_CullTransparentMesh: 0
 --- !u!114 &1571185279 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1870858626, guid: 17cda8b50d3b7ca43bde5b0b8b9f2d44,
@@ -4219,37 +4126,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 766783083}
     m_Modifications:
     - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodFallen.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodFallen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1409890331}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
       propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1409890331}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Feed
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7025842723277873704, guid: c379fedd71b540846ac524d13fdbb58a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4774,37 +4653,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 766783083}
     m_Modifications:
     - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodFallen.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodFallen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1020951915}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
       propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1020951915}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Feed
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7025842723277873704, guid: c379fedd71b540846ac524d13fdbb58a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4931,37 +4782,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 766783083}
     m_Modifications:
     - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodFallen.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodFallen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 383168507}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
       propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 383168507}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Feed
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7025842723277873704, guid: c379fedd71b540846ac524d13fdbb58a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5749,11 +5572,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dog (0)
       objectReference: {fileID: 0}
-    - target: {fileID: 2590293078660236383, guid: 17cda8b50d3b7ca43bde5b0b8b9f2d44,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17cda8b50d3b7ca43bde5b0b8b9f2d44, type: 3}
 --- !u!1001 &9083054000627002370
@@ -5764,37 +5582,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 766783083}
     m_Modifications:
     - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodFallen.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodFallen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1870858626}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
       propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1870858626}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Feed
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 843212653, guid: c379fedd71b540846ac524d13fdbb58a, type: 3}
-      propertyPath: foodGiven.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7025842723277873704, guid: c379fedd71b540846ac524d13fdbb58a,
         type: 3}
       propertyPath: m_LocalPosition.x

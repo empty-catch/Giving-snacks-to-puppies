@@ -250,9 +250,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  foodFallen:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 0}
         m_MethodName: Feed
         m_Mode: 1
@@ -264,6 +261,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  foodFallen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &9060163593851075187
 PrefabInstance:
   m_ObjectHideFlags: 0

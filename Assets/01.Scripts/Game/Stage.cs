@@ -5,15 +5,27 @@ using UnityEngine.Events;
 
 public class Stage : Singleton<Stage>
 {
-    private static readonly float PlayTime = 20F;
+    private static readonly float PlayTime = 60F;
 
     [SerializeField]
     private FloatEvent floatTimeRemainingChanged;
     [SerializeField]
     private StringEvent stringTimeRemainingChanged;
+    [SerializeField]
+    private StringEvent scoreChanged;
 
     private float timeRemaining = PlayTime;
-    public int Score { get; set; }
+    private int score;
+
+    public int Score
+    {
+        get => score;
+        set
+        {
+            score = value;
+            scoreChanged?.Invoke($"찾은 강아지: {score:0} / 0 마리");
+        }
+    }
 
     private IEnumerator Start()
     {
@@ -22,11 +34,11 @@ public class Stage : Singleton<Stage>
             yield return null;
             timeRemaining -= Time.deltaTime;
             floatTimeRemainingChanged?.Invoke(timeRemaining / PlayTime);
-            stringTimeRemainingChanged?.Invoke(timeRemaining.ToString("0.00"));
+            stringTimeRemainingChanged?.Invoke($"남은시간 {timeRemaining:00.00}");
         }
 
         floatTimeRemainingChanged?.Invoke(0F);
-        stringTimeRemainingChanged?.Invoke("0.00");
+        stringTimeRemainingChanged?.Invoke("남은시간 00.00");
     }
 
     [Serializable]
