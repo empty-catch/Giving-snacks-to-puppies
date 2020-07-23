@@ -18,6 +18,7 @@ public class TitleWidget : UIWidget
     private VoidEvent closeEvents;
 
     public override void Execute(){
+        gameObject.SetActive(true);
         FillCoroutine().Start(this);
     }
 
@@ -41,9 +42,12 @@ public class TitleWidget : UIWidget
 
         yield return fadeTween.WaitForCompletion();
 
+        titleImage.fillAmount = 0.0f;
+        buttonImage.fillAmount = 0.0f;
+
         gameObject.SetActive(false);
         closeEvents.Invoke();
     }
 
-    
+
 }

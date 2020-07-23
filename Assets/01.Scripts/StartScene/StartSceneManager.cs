@@ -15,6 +15,10 @@ public class StartSceneManager : MonoBehaviour
         titlePanel.Execute();
     }
 
+    public void OpenTitle(){
+        titlePanel.Execute();
+    }
+
     public void CloseTitle(){
         titlePanel.Exit();
     }
