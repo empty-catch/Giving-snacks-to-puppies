@@ -188,8 +188,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9083054001403087726}
+  - component: {fileID: 843212653}
   m_Layer: 0
-  m_Name: Food (0)
+  m_Name: Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,3 +212,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &843212653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9083054001403087721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb71e277e82e3d4fb9e217fbe5ab8ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  food: {fileID: 9083053999964360189}
+  foodGiven:
+    m_PersistentCalls:
+      m_Calls: []
+  foodFallen:
+    m_PersistentCalls:
+      m_Calls: []
