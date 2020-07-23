@@ -29,4 +29,9 @@ public class DogFactory : MonoBehaviour
             list.RemoveAt(list.Count - 1);
         }
     }
+
+    public void StartSpawning()
+    {
+        
+    }
 }
