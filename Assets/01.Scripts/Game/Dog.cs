@@ -20,7 +20,7 @@ public class Dog : MonoBehaviour
 
         if (DogFactory.MemoryContains(1 << Index))
         {
-            // 스코어 1점 추가
+            Stage.instance.Score++;
         }
     }
 
