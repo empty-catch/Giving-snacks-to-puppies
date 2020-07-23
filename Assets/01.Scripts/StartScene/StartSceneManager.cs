@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class StartSceneManager : MonoBehaviour
 {
@@ -46,6 +47,6 @@ public class StartSceneManager : MonoBehaviour
     
         yield return fadeTween.WaitForCompletion();
 
-        // TODO : 로드 할 씬 추가하기
+        SceneManager.LoadScene("Game");
     }
 }
