@@ -13,6 +13,7 @@ public class SelectWidget : UIWidget
     [Header("Events")]
     [SerializeField]
     private VoidEvent exitEvent;
+
     public override void Execute(){
         gameObject.SetActive(true);
         for(int i = 0; i < widgetItems.Length; i++){
@@ -21,14 +22,12 @@ public class SelectWidget : UIWidget
     }
 
     public override void Exit(){
-        for(int i = 0; i < widgetItems.Length; i++){
-            widgetItems[i].DOFade(1.0f, 0.5f);
-        }
+        ExitCoroutine().Start(this);
     }
 
     private IEnumerator ExitCoroutine(){
         for(int i = 0; i < widgetItems.Length - 1; i++){
-            widgetItems[i].DOFade(1.0f, 0.5f);
+            widgetItems[i].DOFade(0.0f, 0.5f);
         }
 
         Tween exitTween = widgetItems[widgetItems.Length - 1].DOFade(0.0f, 0.5f);
