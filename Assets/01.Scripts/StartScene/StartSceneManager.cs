@@ -43,7 +43,7 @@ public class StartSceneManager : MonoBehaviour
     private IEnumerator GameStartCoroutine(){
         blackImage.gameObject.SetActive(true);
         Tween fadeTween = blackImage.DOFade(1.0f, 0.5f);
-        
+    
         yield return fadeTween.WaitForCompletion();
 
         // TODO : 로드 할 씬 추가하기
