@@ -4,11 +4,24 @@ using UnityEngine.UI;
 
 public class DogFactory : MonoBehaviour
 {
-    [SerializeField]
-    private Image[] dogs;
+    private static DogFactory instance;
+
     [SerializeField]
     private Sprite[] sprites;
     private int dogMemory;
+
+    public static bool MemoryContains(int mask)
+    {
+        return (instance.dogMemory & mask) == mask;
+    }
+
+    public static void SetRandomDog(Dog dog)
+    {
+        int index = Random.Range(0, instance.sprites.Length);
+        dog.Image.sprite = instance.sprites[index];
+        dog.Image.SetNativeSize();
+        dog.Index = index;
+    }
 
     public void RememberDog(Transform dogs)
     {
@@ -30,8 +43,8 @@ public class DogFactory : MonoBehaviour
         }
     }
 
-    public void StartSpawning()
+    private void Awake()
     {
-        
+        instance = this;
     }
 }
