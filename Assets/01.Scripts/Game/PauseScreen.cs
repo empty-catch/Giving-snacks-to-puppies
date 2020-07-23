@@ -20,4 +20,9 @@ public class PauseScreen : MonoBehaviour
         Time.timeScale = 1F;
         SceneManager.LoadScene("00.StartScene");
     }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("Game");
+    }
 }

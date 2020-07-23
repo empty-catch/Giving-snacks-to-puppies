@@ -8,11 +8,17 @@ public class Stage : Singleton<Stage>
     private static readonly float PlayTime = 60F;
 
     [SerializeField]
+    private GameObject[] objects;
+    [SerializeField]
     private FloatEvent floatTimeRemainingChanged;
     [SerializeField]
     private StringEvent stringTimeRemainingChanged;
     [SerializeField]
     private StringEvent scoreChanged;
+    [SerializeField]
+    private VoidEvent stageFinished;
+    [SerializeField]
+    private StringEvent finalScoreApplied;
 
     private float timeRemaining = PlayTime;
     private int score;
@@ -27,6 +33,11 @@ public class Stage : Singleton<Stage>
         }
     }
 
+    public void ActivateObjects()
+    {
+        objects[(int)GameManager.instance.StageDifficulty].SetActive(true);
+    }
+
     private IEnumerator Start()
     {
         while (timeRemaining > 0F)
@@ -39,6 +50,8 @@ public class Stage : Singleton<Stage>
 
         floatTimeRemainingChanged?.Invoke(0F);
         stringTimeRemainingChanged?.Invoke("남은시간 00.00");
+        finalScoreApplied?.Invoke(Score.ToString());
+        stageFinished?.Invoke();
     }
 
     [Serializable]
