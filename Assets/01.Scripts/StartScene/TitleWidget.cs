@@ -44,4 +44,6 @@ public class TitleWidget : UIWidget
         gameObject.SetActive(false);
         closeEvents.Invoke();
     }
+
+    
 }

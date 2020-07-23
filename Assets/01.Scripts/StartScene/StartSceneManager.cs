@@ -18,4 +18,12 @@ public class StartSceneManager : MonoBehaviour
     public void CloseTitle(){
         titlePanel.Exit();
     }
+
+    public void ReturnToTitle(){
+        selectPanel.Exit();
+    }
+
+    public void SetDifficulty(int value){
+        GameManager.instance.SettingDifficulty(value);
+    }
 }
