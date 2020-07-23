@@ -1,24 +1,30 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DogFactory : MonoBehaviour
 {
     [SerializeField]
-    private GameObject prefab;
+    private Image[] dogs;
     [SerializeField]
-    private Sprite[] dogs;
-
+    private Sprite[] sprites;
     private int dogMemory;
 
-    public void RememberDog()
+    public void RememberDog(Transform dogs)
     {
         dogMemory = 0;
-        var list = Enumerable.Range(0, dogs.Length).ToList();
+        var list = Enumerable.Range(0, sprites.Length).ToList();
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < dogs.childCount; i++)
         {
             int index = Random.Range(0, list.Count);
-            dogMemory |= 1 << list[index];
+            int randomNum = list[index];
+            var dogImage = dogs.GetChild(i).GetComponent<Image>();
+
+            dogMemory |= 1 << randomNum;
+            dogImage.sprite = sprites[randomNum];
+            dogImage.SetNativeSize();
+
             list[index] = list.Last();
             list.RemoveAt(list.Count - 1);
         }
