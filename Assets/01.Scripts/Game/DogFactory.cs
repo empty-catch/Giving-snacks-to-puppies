@@ -1,31 +1,37 @@
 using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DogFactory : MonoBehaviour
 {
     private static DogFactory instance;
+    private static int randomCount;
 
     [SerializeField]
     private Sprite[] sprites;
-    private int dogMemory;
+    private List<int> dogMemory = new List<int>();
 
-    public static bool MemoryContains(int mask)
+    public static bool MemoryContains(int index)
     {
-        return (instance.dogMemory & mask) == mask;
+        return instance.dogMemory.Contains(index);
     }
 
     public static void SetRandomDog(Dog dog)
     {
-        int index = Random.Range(0, instance.sprites.Length);
+        int randomOfMemory = instance.dogMemory[Random.Range(0, instance.dogMemory.Count)];
+        int randomOfAll = Random.Range(0, instance.sprites.Length);
+        int index = randomCount < 2 ? randomOfMemory : randomOfAll;
+
         dog.Image.sprite = instance.sprites[index];
         dog.Image.SetNativeSize();
         dog.Index = index;
+        randomCount++;
     }
 
     public void RememberDog(Transform dogs)
     {
-        dogMemory = 0;
+        dogMemory.Clear();
         var list = Enumerable.Range(0, sprites.Length).ToList();
 
         for (int i = 0; i < dogs.childCount; i++)
@@ -34,7 +40,7 @@ public class DogFactory : MonoBehaviour
             int randomNum = list[index];
             var dogImage = dogs.GetChild(i).GetComponent<Image>();
 
-            dogMemory |= 1 << randomNum;
+            dogMemory.Add(randomNum);
             dogImage.sprite = sprites[randomNum];
             dogImage.SetNativeSize();
 

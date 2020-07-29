@@ -26,7 +26,7 @@ public class Dog : MonoBehaviour
         tween?.Kill();
         DOVirtual.DelayedCall(1F, () => shouldRenew = true).Play();
 
-        if (DogFactory.MemoryContains(1 << Index))
+        if (DogFactory.MemoryContains(Index))
         {
             DOVirtual.DelayedCall(0.5F, () => Stage.instance.Score++).Play();
             sign.sprite = oSign;
