@@ -8,7 +8,9 @@ public class Stage : Singleton<Stage>
     private static readonly float PlayTime = 60F;
 
     [SerializeField]
-    private GameObject[] objects;
+    private Transform dog;
+    [SerializeField]
+    private Transform dogMemory;
     [SerializeField]
     private FloatEvent floatTimeRemainingChanged;
     [SerializeField]
@@ -35,7 +37,12 @@ public class Stage : Singleton<Stage>
 
     public void ActivateObjects()
     {
-        objects[(int)GameManager.instance.StageDifficulty].SetActive(true);
+        dog.GetChild((int)GameManager.instance.StageDifficulty).gameObject.SetActive(true);
+    }
+
+    public void ActivateDogMemory()
+    {
+        dogMemory.GetChild((int)GameManager.instance.StageDifficulty).gameObject.SetActive(true);
     }
 
     private IEnumerator Start()

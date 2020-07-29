@@ -29,10 +29,11 @@ public class DogFactory : MonoBehaviour
         randomCount++;
     }
 
-    public void RememberDog(Transform dogs)
+    public void RememberDog(Transform allDogs)
     {
         dogMemory.Clear();
         var list = Enumerable.Range(0, sprites.Length).ToList();
+        var dogs = allDogs.GetChild((int)GameManager.instance.StageDifficulty);
 
         for (int i = 0; i < dogs.childCount; i++)
         {
