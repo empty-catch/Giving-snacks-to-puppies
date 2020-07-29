@@ -31,7 +31,7 @@ public class Stage : Singleton<Stage>
         set
         {
             score = value;
-            scoreChanged?.Invoke($"찾은 강아지: {score:0} / 0 마리");
+            scoreChanged?.Invoke($"찾은 강아지: {score:0}마리");
         }
     }
 
