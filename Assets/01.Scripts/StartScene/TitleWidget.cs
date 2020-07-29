@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 
 public class TitleWidget : UIWidget
-{    
+{
     [Header("Objects")]
     [SerializeField]
     private Image titleImage;
