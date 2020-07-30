@@ -17,6 +17,8 @@ public class StartSceneManager : MonoBehaviour
     [SerializeField]
     private Image blackImage;
 
+    public static LevelButton beforeButton;
+
     private void Start(){
         titlePanel.Execute();
     }
